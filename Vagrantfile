@@ -33,19 +33,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # Set box configuration specifics.
   config.vm.define "default", primary: true do |box|
-    box.vm.post_up_message = "
-				    888                   
-				    888                   
-				    888                   
-      88888b.  88888b.          .d88888  .d88b.  888  888 
-      888 \"88b 888 \"88b        d88\" 888 d8P  Y8b 888  888 
-      888  888 888  888 888888 888  888 88888888 Y88  88P 
-      888  888 888 d88P        Y88b 888 Y8b.      Y8bd8P  
-      888  888 88888P            Y88888   Y8888    Y88P   
-	      888                                        
-	      888                                        
-	      888                                        
-    "
+    box.vm.post_up_message = "                                                         
+         88  888888888888                                
+         88          ,8P'                                
+         88         d8\"                                  
+ ,adPPYb,88       ,8P'  8b       d8  88,dPYba,,adPYba,   
+a8\"    `Y88      d8\"    `8b     d8'  88P'   \"88\"    \"8a  
+8b       88    ,8P'      `8b   d8'   88      88      88  
+\"8a,   ,d88   d8\"         `8b,d8'    88      88      88  
+ `\"8bbdP\"Y8  8P'            \"8\"      88      88      88  
+                                                         
+                                                         
+"
 
     # Set hostname
     box.vm.hostname = "vagrantbox"
