@@ -6,14 +6,13 @@
 VAGRANTFILE_API_VERSION = "2"
 
 # Set all configurable variables here for easy modification
-host_name = ENV['BIFROST_GUEST_NAME']   || 'npdev'
+host_name = ENV['BIFROST_GUEST_NAME']   || 'd7vm'
 host_ip   = ENV['BIFROST_GUEST_IP']     || '192.168.33.30'
 memory    = ENV['BIFROST_GUEST_MEMORY'] || '1536'
 cores     = ENV['BIFROST_GUEST_CORES']  || '2'
 cpu_limit = ENV['BIFROST_GUEST_CLIMIT'] || '100'
 vram_size = ENV['BIFROST_GUEST_VRAM']   || '16'
 disk_ssd  = ENV['BIFROST_HOST_SSD']     || 'on'
-php_version = ENV['BIFROST_GUEST_PHP_VERSION']   || '5.6'
 vagrant_box = ENV['BIFROST_GUEST_BOX'] || 'hashicorp/precise64'
 shared_folder = ENV['BIFROST_HOST_SHARE'] || '.'
 local_mount_point           = "/vagrant"

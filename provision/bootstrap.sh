@@ -10,5 +10,17 @@ if ! [ -L /var/www ]; then
   ln -fs /vagrant/www /var/www
 fi 
 
-# Install PHP, MySQL and other necessary libs
-apt-get install -y php5 php5-mysql php5-gd php5-xdebug php5-intl
+# Install PHP 5.5
+apt-get install python-software-properties
+add-apt-repository ppa:ondrej/php5
+apt-get update
+apt-get install -y php5
+
+# Install PHP libs, MySQL and other necessary libs
+apt-get install -y php5-mysql php5-gd php5-xdebug php5-intl php5-curl
+
+# Install composer globally
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+composer global require drush/drush:7.*
+export PATH="$HOME/.composer/vendor/bin:$PATH"
