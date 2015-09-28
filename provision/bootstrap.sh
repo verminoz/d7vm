@@ -19,7 +19,7 @@ apt-get install -y php5
 # Install PHP libs, MySQL and other necessary libs
 apt-get install -y php5-mysql php5-gd php5-xdebug php5-intl php5-curl
 
-# Install composer globally
+# Install composer globally and Drush 7.x
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer global require drush/drush:7.*

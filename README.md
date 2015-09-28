@@ -18,16 +18,19 @@ Unless you have changed the Vagrantfile config the server will run on *192.168.3
 `192.168.33.30 d7vm.dev`
 
 ## Technical specifications
+By default the box will be set on the following specs:
 
 ### VM
-By default the box will be set on the following specs:
 + 2 cores, CPU limit 100%
-+ memory 1536MB, VRAM 16
-+ SSD mode on
-+ Ubuntu 12.04 LTS (hashicorp/precise64)
++ Memory 1536MB, Video Memory 16MB
++ Disk SSD mode
++ Ubuntu 12.04 LTS 64bit (*hashicorp/precise64* image)
 
 ### Server
 + Apache2
 + PHP 5.5
 + MySQL
-+ Drush 7
+
+### Tools
++ Drush 7.x
++ Composer
