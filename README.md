@@ -14,7 +14,7 @@ The vagrantbox is mostly built with reference to a *Linux* host but should work 
 3. `cd` to that directory and run `vagrant up`
 4. Go get a cup of coffee but don't be too late. It doesn't take that long ;-)
 
-Unless you have changed the Vagrantfile config the server will run on *192.168.33.30*. Configure your hosts file (*/etc/hosts*) to be able to use a more practical domain name. For example you can add the following line:
+Unless you have changed the Vagrantfile config the server will run on *192.168.33.30*. Configure your hosts file (`/etc/hosts`) to be able to use a more practical domain name. For example you can add the following line:
 `192.168.33.30 d7vm.dev`
 
 ## Technical specifications
