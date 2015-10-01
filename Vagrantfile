@@ -20,29 +20,30 @@ local_mount_point           = "/vagrant"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Set box
   config.vm.box = vagrant_box
-  
+
   ## Enable SSH agent forwarding. Could also utilize SSH key copying.
   # config.ssh.forward_agent = true
-  
+
   # Provisioning scripts.
   config.vm.provision :shell, path: "provision/bootstrap.sh"
-  
+  config.vm.provision :shell, path: "provision/utilities.sh", privileged: false
+
   # Port forwarding.
   #config.vm.network :forwarded_port, guest: 80, host: 80
-  
+
   # Set box configuration specifics.
   config.vm.define "default", primary: true do |box|
-    box.vm.post_up_message = "                                                         
-         88  888888888888                                
-         88          ,8P'                                
-         88         d8\"                                  
- ,adPPYb,88       ,8P'  8b       d8  88,dPYba,,adPYba,   
-a8\"    `Y88      d8\"    `8b     d8'  88P'   \"88\"    \"8a  
-8b       88    ,8P'      `8b   d8'   88      88      88  
-\"8a,   ,d88   d8\"         `8b,d8'    88      88      88  
- `\"8bbdP\"Y8  8P'            \"8\"      88      88      88  
-                                                         
-                                                         
+    box.vm.post_up_message = "
+         88  888888888888
+         88          ,8P'
+         88         d8\"
+ ,adPPYb,88       ,8P'  8b       d8  88,dPYba,,adPYba,
+a8\"    `Y88      d8\"    `8b     d8'  88P'   \"88\"    \"8a
+8b       88    ,8P'      `8b   d8'   88      88      88
+\"8a,   ,d88   d8\"         `8b,d8'    88      88      88
+ `\"8bbdP\"Y8  8P'            \"8\"      88      88      88
+
+
 "
 
     # Set hostname
