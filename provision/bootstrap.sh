@@ -21,8 +21,9 @@ apt-get install -y php5
 # Install PHP libs, MySQL and other necessary libs
 apt-get install -y php5-mysql php5-gd php5-xdebug php5-intl php5-curl
 
-# Install MySQL/MariaDB server and client
-apt-get install mysql-server mysql-client
+# Install MySQL/MariaDB server and client without password prompt
+export DEBIAN_FRONTEND=noninteractive
+apt-get -q -y install mysql-server mysql-client
 
 # Enable mod_rewrite for clean URLs
 a2enmod rewrite
