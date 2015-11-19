@@ -17,6 +17,8 @@ The vagrantbox is mostly built with reference to a *Linux* host but should work 
 Unless you have changed the Vagrantfile config the server will run on *192.168.33.30*. Configure your hosts file to be able to use an alias. For example add the following line to `/etc/hosts`:
 `192.168.33.30 d7vm.dev`
 
+The installation directory is set to /var/www --> /vagrant/www
+
 ## Technical specifications
 By default the box will be set with the following specs:
 
